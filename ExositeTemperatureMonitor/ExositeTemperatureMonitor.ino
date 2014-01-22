@@ -145,8 +145,8 @@ void loop() {
     writeParam += "&Input="; //add add parameter for Digital Input status
     writeParam += String(InputStatus, DEC);
     
-    writeParam += "&Errors="; //add add parameter for Digital Input status
-    writeParam += String(ErrorCount, DEC);
+    writeParam += "&Uptime="; //add add parameter for Arduino Uptime (in seconds)
+    writeParam += String(millis()/1000, DEC);
     
     Serial.print("writeParam String being sent to Exosite: ");
     Serial.println(writeParam);
